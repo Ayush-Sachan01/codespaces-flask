@@ -1,0 +1,34 @@
+free -head
+
+lscpu
+
+df -h
+
+cat /etc/os-release
+
+docker --version 
+
+docker pull nginx
+
+docker images
+
+docker images ls
+
+docker container ls -a
+
+docker ps -alt
+
+docker logs -f nginx
+//-f means follow. Use ctrl +c to stop
+
+docker rm -f nginx
+// -f is for force
+
+docker exec -it nginx bash
+// this is bash of the container
+//inside it check whether curl is present 
+//curl http://localhost or http://localhost:80 because 80 is default code , you don't need to write it.
+// for https : 443
+
+// docs.docker.com
+//hub.docker.com
