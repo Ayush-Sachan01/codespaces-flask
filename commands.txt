@@ -1,8 +1,8 @@
-free -head
+free -h ('h' is human readable form)
 
-lscpu
+lscpu (list cpus)
 
-df -h
+df -h  (Disk space)
 
 cat /etc/os-release
 
@@ -12,7 +12,7 @@ docker pull nginx
 
 docker images
 
-docker images ls
+docker image ls
 
 docker container ls -a
 
@@ -21,7 +21,7 @@ docker ps -alt
 docker logs -f nginx
 //-f means follow. Use ctrl +c to stop
 
-docker rm -f nginx
+docker rm -f nginx (enter a space to delete multiple)
 // -f is for force
 
 docker exec -it nginx bash
@@ -32,3 +32,17 @@ docker exec -it nginx bash
 
 // docs.docker.com
 //hub.docker.com
+
+docker run --name nginx -p 80:80 nginx(create a docker container)
+docker run --name nginx  -d -p 8090:80 nginx(detached mode)
+
+docker run -itd -p 8090:80 nginx:alpine (itd means  )
+
+docker init
+
+docker build -t flask:v1 .
+docker login
+docker tag --help
+
+docker tag flask:v1 ayushsachan01/flask:v1
+docker push ayushsachan01/flask:v1
