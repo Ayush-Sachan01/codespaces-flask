@@ -46,3 +46,28 @@ docker tag --help
 
 docker tag flask:v1 ayushsachan01/flask:v1
 docker push ayushsachan01/flask:v1
+
+
+Docker composer repositories:
+https://github.com/rahulmr/django-cms-quickstart.git
+
+
+Docker compose commands:
+
+docker compose build web
+docker compose up -d database_default
+docker compose ps
+
+docker compose run web python manage.py migrate
+docker compose run web python manage.py createsuperuser
+docker compose up -d
+docker compose ps
+
+docker compose logs -f web
+docker compose logs -f database_default
+docker compose exec -w /app web python manage.py check  --deploy
+
+docker compose exec -w /app web python manage.py test
+
+docker composes stop
+docker compose start
